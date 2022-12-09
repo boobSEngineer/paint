@@ -1,0 +1,119 @@
+// Colors
+$bg-color: hsl(240, 7%, 97%);
+$dot-color: hsl(0, 0%, 74%);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
+
+
+
+.canvas2 {
+  background: transparent;
+  position: absolute;
+  top:0;
+  left: 0;
+  border-radius: 10px;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+canvas {
+  background:
+          linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+          linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+          $dot-color;
+  background-size: $dot-space $dot-space;
+  border-radius: 10px;
+  image-rendering: pixelated;
+}
+
+.invisible {
+  position: relative;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  height: 100%;
+  display: flex;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px;
+  max-width: 300px;
+  min-width: 250px;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+.panel p {
+  font-size: 18px ;
+  margin: 4px 0;
+}
+
+.panel_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0 0 0;
+}
+
+.panel_box_button {
+  margin: 25px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.panel_box_button button {
+  padding: 15px;
+  margin-right: 24px;
+  border-radius: 10px;
+
+}
+.panel_box_button button:hover {
+  background: #666666;
+  color: azure;
+}
+
+.accept {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.accept:hover {
+  background: #666666;
+  color: azure;
+}
+
+.draw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.draw p {
+  font-size: 40px;
+  margin: 0 0 45px 0;
+}
+
+.weight {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.weight p{
+  margin-left: 15px;
+}
